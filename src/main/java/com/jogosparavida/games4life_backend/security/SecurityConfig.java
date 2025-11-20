@@ -25,7 +25,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) // API REST
             .cors(cors -> cors.configurationSource(corsConfigurationSource)) // usa nosso CorsConfig
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().permitAll() // permite tudo, ajuste depois se tiver auth
+                .anyRequest().permitAll() // permite tudo
             );
 
         return http.build();

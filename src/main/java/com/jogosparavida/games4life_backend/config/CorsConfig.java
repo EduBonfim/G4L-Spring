@@ -15,11 +15,10 @@ public class CorsConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
 
-        // Origens permitidas
+        // Origens permitidas (Angular)
         cfg.setAllowedOrigins(List.of(
-                "https://games4life-delta.vercel.app",
+                "https://g4-l-angular.vercel.app",
                 "http://localhost:4200"
-                
         ));
 
         // Métodos HTTP permitidos
