@@ -18,7 +18,8 @@ public class CorsConfig {
         // Origens permitidas (Angular)
         cfg.setAllowedOrigins(List.of(
                 "https://g4-l-angular.vercel.app",
-                "http://localhost:4200"
+                "http://localhost:4200",
+                "https://g4l-spring.onrender.com"
         ));
 
         // Métodos HTTP permitidos
