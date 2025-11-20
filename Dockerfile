@@ -3,14 +3,12 @@ FROM maven:3.9-eclipse-temurin-21 AS builder
 
 WORKDIR /app
 
-# Copy everything needed for build
+# Copy pom.xml and source
 COPY pom.xml .
-COPY mvnw mvnw.cmd ./
-COPY .mvn .mvn/
 COPY src ./src
 
-# Build the application
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+# Build the application using maven (not wrapper)
+RUN mvn clean package -DskipTests
 
 # Stage 2: Runtime
 FROM eclipse-temurin:21-jre-alpine
