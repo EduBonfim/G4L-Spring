@@ -3,11 +3,11 @@ FROM maven:3.9-eclipse-temurin-21 AS builder
 
 WORKDIR /app
 
-# Copy pom.xml and source
+# Copy everything needed for build
 COPY pom.xml .
+COPY mvnw mvnw.cmd ./
+COPY .mvn .mvn/
 COPY src ./src
-COPY .mvn ./.mvn
-COPY mvnw .
 
 # Build the application
 RUN chmod +x mvnw && ./mvnw clean package -DskipTests
