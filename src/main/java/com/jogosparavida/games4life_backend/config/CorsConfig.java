@@ -18,8 +18,8 @@ public class CorsConfig {
         // Origens permitidas
         cfg.setAllowedOrigins(List.of(
                 "https://games4life-delta.vercel.app",
-                "http://localhost:4200",
-                "https://games-4-life.onrender.com"
+                "http://localhost:4200"
+                
         ));
 
         // Métodos HTTP permitidos
