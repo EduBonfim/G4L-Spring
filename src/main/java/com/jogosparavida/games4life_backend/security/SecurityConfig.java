@@ -25,8 +25,10 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) // API REST
             .cors(cors -> cors.configurationSource(corsConfigurationSource)) // usa nosso CorsConfig
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/actuator/health").permitAll() // permite health check
                 .anyRequest().permitAll() // permite tudo
-            );
+            )
+            .headers(headers -> headers.frameOptions(frame -> frame.disable())); // permite H2 console
 
         return http.build();
     }

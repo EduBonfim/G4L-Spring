@@ -12,11 +12,13 @@ spring.datasource.password=
 # JPA
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=create
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=false
 
-# Actuator - Health checks para Render
-management.endpoints.web.exposure.include=health,info
-management.endpoint.health.show-details=always
-management.health.livenessState.enabled=true
-management.health.readinessState.enabled=true
+# Server
+server.compression.enabled=true
+server.compression.min-response-size=1024
+
+# Logging
+logging.level.root=INFO
+logging.level.com.jogosparavida=INFO
