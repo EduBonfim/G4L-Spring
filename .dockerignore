@@ -1,0 +1,17 @@
+target/
+bin/
+.git/
+.gitignore
+.mvn/wrapper/
+.classpath
+.factorypath
+.project
+.settings/
+*.log
+node_modules/
+.vscode/
+.idea/
+*.iml
+*.jar
+*.war
+.DS_Store
