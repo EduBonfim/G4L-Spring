@@ -14,7 +14,11 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/accessories")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+    "http://localhost:4200",
+    "https://g4-l-angular.vercel.app",
+    "https://g4l-spring.onrender.com"
+})
 public class AccessoryController {
 
     private final AccessoryService accessoryService;

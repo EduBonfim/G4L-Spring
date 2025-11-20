@@ -15,7 +15,11 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/rentals")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+    "http://localhost:4200",
+    "https://g4-l-angular.vercel.app",
+    "https://g4l-spring.onrender.com"
+})
 public class RentalController {
 
     private final RentalService rentalService;

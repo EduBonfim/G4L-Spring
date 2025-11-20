@@ -13,7 +13,11 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/addresses")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+    "http://localhost:4200",
+    "https://g4-l-angular.vercel.app",
+    "https://g4l-spring.onrender.com"
+})
 public class AddressController {
 
     private final AddressService addressService;
